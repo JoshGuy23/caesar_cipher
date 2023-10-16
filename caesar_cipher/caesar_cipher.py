@@ -10,5 +10,8 @@ def encrypt(text, shift):
         new_index = alphabet.index(c) + shift
         if new_index > 25:
             new_index -= 26
-        new_text += alphabet.index(new_index)
+        new_text += alphabet[new_index]
     print(new_text)
+
+if direction == "encode":    
+    encrypt(text, shift)
