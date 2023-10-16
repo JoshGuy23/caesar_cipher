@@ -11,6 +11,10 @@ shift = int(input("Type the shift number:\n"))
 def caesar(input_text, shift_amount, text_direction):
     new_text = ""
     for c in input_text:
+        if not c.isalpha():
+            new_text += c
+            continue
+
         if text_direction == "encode":
             new_index = alphabet.index(c) + shift_amount
             while new_index > 25:
