@@ -6,8 +6,8 @@ shift = int(input("Type the shift number:\n"))
 
 def encrypt(plain_text, shift_amount):
     new_text = ""
-    for c in text:
-        new_index = alphabet.index(c) + shift
+    for c in plain_text:
+        new_index = alphabet.index(c) + shift_amount
         if new_index > 25:
             new_index -= 26
         new_text += alphabet[new_index]
