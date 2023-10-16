@@ -13,9 +13,9 @@ def encrypt(plain_text, shift_amount):
         new_text += alphabet[new_index]
     print(f"The encoded text is {new_text}.")
 
-def decrypt(plain_text, shift_amount):
+def decrypt(cipher_text, shift_amount):
     new_text = ""
-    for c in plain_text:
+    for c in cipher_text:
         new_index = alphabet.index(c) - shift_amount
         while new_index < 0:
             new_index += 26
